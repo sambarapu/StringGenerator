@@ -10,6 +10,8 @@ Command to run application : java -jar build/libs/stringgenerator-0.0.1-SNAPSHOT
 
 Application can be accessed using : http://localhost:9090/v1/api/randomString
 
+health url can be tested on actuator url
+
 Application is also integrated with swagger ui to play around Api's.
 Below is the url 
 
