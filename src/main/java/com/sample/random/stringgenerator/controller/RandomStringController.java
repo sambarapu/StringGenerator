@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,10 @@ import static java.net.HttpURLConnection.HTTP_OK;
 @RequestMapping(API)
 public class RandomStringController {
 
+
+    @Value("${wordsListFile}")
+    private String fileName;
+
     @Qualifier("FileReader")
     @Autowired
     RandomStringService randomStringService;
@@ -29,7 +34,7 @@ public class RandomStringController {
         @ApiResponse(code = HTTP_OK, message = "", response = String.class),
     })
     public ResponseEntity<String> getRandomString(){
-        return ResponseEntity.ok().body(randomStringService.getRandomString(FILE_NAME));
+        return ResponseEntity.ok().body(randomStringService.getRandomString(fileName));
     }
 
 
