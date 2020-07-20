@@ -16,7 +16,7 @@ public class RandomNumberGenerator {
      *
      * @return
      */
-    public static int generateRandomNumber(){
-        return (int) ( Math.random() * ( WordsLoader.loadWordsFromFile(FILE_NAME).size() - MIN_VALUE + 1) + MIN_VALUE);
+    public int generateRandomNumber(){
+        return (int) ( Math.random() * ( wordsLoader.loadWordsFromFile(FILE_NAME).size() - MIN_VALUE + 1) + MIN_VALUE);
     }
 }

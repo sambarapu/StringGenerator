@@ -32,12 +32,6 @@ public class RandomStringController {
         return ResponseEntity.ok().body(randomStringService.getRandomString(FILE_NAME));
     }
 
-    @GetMapping(GET_STRING_API+"/{id}")
-    public ResponseEntity<String>  getRandomString(@PathVariable("id") int id) {
-        if(id > WordsLoader.loadWordsFromFile(FILE_NAME).size())
-            return ResponseEntity.badRequest()
-                    .body("Invalid Index Inpute");
-        return  ResponseEntity.ok().body("Output >>> "+WordsLoader.loadWordsFromFile(FILE_NAME).get(id));
-    }
+
 
 }
