@@ -14,3 +14,5 @@ Application is also integrated with swagger ui to play around Api's.
 Below is the url 
 
 http://localhost:9090/swagger-ui.html#!/random45string45controller/getRandomStringUsingGET_1
+
+Added integration / unit test samples
