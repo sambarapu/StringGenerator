@@ -1,4 +1,4 @@
-This application is sample application to generate a random string from a words list
+This application is sample application built using spring boot to generate a random string from a words list
 
 As of today, random string is generated from static file."words.txt" from resources. Application can be
 extended to read the string from DB/cache and can increase scaling accordingly.
