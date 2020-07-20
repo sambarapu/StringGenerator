@@ -31,7 +31,7 @@ public class WordsLoader {
         try{
             BufferedReader bufferedReader = new BufferedReader(
                     new InputStreamReader(getClass().getResourceAsStream(fileName)));
-            words=bufferedReader.lines().collect(Collectors.toList());
+            words = bufferedReader.lines().collect(Collectors.toList());
         }catch (Exception exception ){
             logger.error("Error while loading words to list::",exception);
         }
